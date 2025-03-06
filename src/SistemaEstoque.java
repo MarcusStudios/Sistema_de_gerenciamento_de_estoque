@@ -60,7 +60,7 @@ public class SistemaEstoque {
     }
 
     private static void exibirMenu() {
-        System.out.println("\n===== SISTEMA DE GERENCIAMENTO  =====");
+        System.out.println("\n=====SISTEMA DE GERENCIAMENTO=====");
         System.out.println("1 - Cadastrar produto");
         System.out.println("2 - Listar produtos");
         System.out.println("3 - Pesquisar produto");
