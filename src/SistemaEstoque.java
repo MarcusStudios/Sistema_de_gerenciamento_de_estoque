@@ -1,10 +1,11 @@
-// Classe principal do sistema
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.io.*;
+
+
 
 public class SistemaEstoque {
     private static ArrayList<Produto> produtos = new ArrayList<>();
@@ -59,7 +60,7 @@ public class SistemaEstoque {
     }
 
     private static void exibirMenu() {
-        System.out.println("\n===== SISTEMA DE GERENCIAMENTO DE ESTOQUE =====");
+        System.out.println("\n===== SISTEMA DE GERENCIAMENTO  =====");
         System.out.println("1 - Cadastrar produto");
         System.out.println("2 - Listar produtos");
         System.out.println("3 - Pesquisar produto");
@@ -620,101 +621,5 @@ public class SistemaEstoque {
         } catch (Exception e) {
             System.out.println("Erro ao salvar dados de movimentos: " + e.getMessage());
         }
-    }
-}
-
-// Classe que representa um produto
-class Produto implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private int id;
-    private String nome;
-    private double preco;
-    private int quantidade;
-    private String categoria;
-
-    public Produto(int id, String nome, double preco, int quantidade, String categoria) {
-        this.id = id;
-        this.nome = nome;
-        this.preco = preco;
-        this.quantidade = quantidade;
-        this.categoria = categoria;
-    }
-
-    // Getters e Setters
-    public int getId() {
-        return id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public double getPreco() {
-        return preco;
-    }
-
-    public void setPreco(double preco) {
-        this.preco = preco;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public String getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(String categoria) {
-        this.categoria = categoria;
-    }
-}
-
-// Classe que representa uma movimentação de estoque
-class Movimento implements Serializable {
-    private static final long serialVersionUID = 1L;
-
-    private int produtoId;
-    private String tipo; // ENTRADA, VENDA, DESCARTE, TRANSFERÊNCIA
-    private int quantidade;
-    private String observacao;
-    private LocalDateTime dataHora;
-
-    public Movimento(int produtoId, String tipo, int quantidade, String observacao, LocalDateTime dataHora) {
-        this.produtoId = produtoId;
-        this.tipo = tipo;
-        this.quantidade = quantidade;
-        this.observacao = observacao;
-        this.dataHora = dataHora;
-    }
-
-    // Getters
-    public int getProdutoId() {
-        return produtoId;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public String getObservacao() {
-        return observacao;
-    }
-
-    public LocalDateTime getDataHora() {
-        return dataHora;
     }
 }
