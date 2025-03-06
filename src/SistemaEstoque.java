@@ -591,17 +591,17 @@ public class SistemaEstoque {
         } catch (FileNotFoundException e) {
             System.out.println("Arquivo de produtos não encontrado. Será criado ao salvar.");
         } catch (Exception e) {
-            System.out.println("Erro ao carregar dados de produtos: " + e.getMessage());
+            System.out.println(" Erro  ao  carregar dados de produtos: " + e.getMessage());
         }
 
         // Carregar movimentos
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(ARQUIVO_MOVIMENTOS))) {
             movimentos = (ArrayList<Movimento>) ois.readObject();
-            System.out.println("Dados de movimentações carregados com sucesso!");
+            System.out.println("Dados de movimentações carregados  com  sucesso ! ");
         } catch (FileNotFoundException e) {
-            System.out.println("Arquivo de movimentos não encontrado. Será criado ao salvar.");
+            System.out.println(" Arquivo de movimentos não encontrado. Será criado ao salvar.");
         } catch (Exception e) {
-            System.out.println("Erro ao carregar dados de movimentos: " + e.getMessage());
+            System.out.println(" Erro ao carregar dados de movimentos : " + e.getMessage());
         }
     }
 
@@ -611,7 +611,7 @@ public class SistemaEstoque {
             oos.writeObject(produtos);
             System.out.println("Dados de produtos salvos com sucesso!");
         } catch (Exception e) {
-            System.out.println("Erro ao salvar dados de produtos: " + e.getMessage());
+            System.out.println(" Erro ao salvar dados de produtos: " + e.getMessage());
         }
 
         // Salvar movimentos
