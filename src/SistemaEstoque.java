@@ -95,7 +95,7 @@ public class SistemaEstoque {
                 preco = Double.parseDouble(scanner.nextLine());
                 precoValido = true;
             } catch (NumberFormatException e) {
-                System.out.println("Preço inválido. Use formato numérico (ex: 10.50)");
+                System.out.println("Preço inválido. Use formato numérico (ex: 11.50)");
             }
         }
 
@@ -577,8 +577,8 @@ public class SistemaEstoque {
 
             if (qtdVendida > 0) {
                 double valorTotal = qtdVendida * p.getPreco();
-                System.out.printf("%-15s\t%d\t\tR$ %.2f\n",
-                        limitarTexto(p.getNome(), 15), qtdVendida, valorTotal);
+                System.out.printf("%-15s\t%d\t\tR$ %.2f\n ",
+                        limitarTexto(p.getNome(), 15), qtdVendida, valorTotal );
             }
         }
     }
